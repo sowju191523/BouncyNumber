@@ -1,0 +1,49 @@
+package hell;
+
+import java.util.Scanner;
+
+public class Bouncy {
+    public static void main(String[] args)
+    {
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt();
+       int m=n;
+       int count=0;
+       while(n>0)
+       {
+        int d=n%10;
+        count++;
+        n=n/10;
+       }
+       int[] a=new int[count];
+       int i=0;
+       while(m>0)
+       {
+        int e=m%10;
+        a[i]=e;
+        i++;
+        m=m/10;
+       }
+       int count1=0;
+       int count2=0;
+       for(int j=0;j<a.length-1;j++ )
+       {
+          if(a[j]>a[j+1])
+          {
+            count1++;
+          }
+          else{
+             count2++;
+          }
+       }
+       if(count2>0)
+       {
+        System.out.println("the given number is a Bouncy ");
+       }
+       else{
+        System.out.println("the given number is not a bouncy number");
+       }
+      
+    }
+    
+}
